@@ -44,10 +44,85 @@ a {
         display: grid;
         grid-template-columns: auto 1fr auto;
         padding: 0 $main_shift;
+        align-items: center;
     }
 
     &__center {
         display: flex;
         justify-content: center;
     }
+}
+
+.logo {
+    color: $main_lite;
+    text-decoration: none;
+    letter-spacing: 1%;
+
+    &:visited {
+        color: $main_lite;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+}
+
+.main-nav {
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        color: $main_lite;
+        text-decoration: none;
+        padding: 1.8rem 1.38rem;
+        display: inline-block;   
+
+        &:visited {
+            color: $main_lite;    
+        } 
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+        background: url('/images/icons/search.svg') no-repeat center center;
+        background-size: content;
+        cursor: pointer;
+        padding-right: 0.5rem;
+    }
+
+    &__form {
+        background: none;
+        border: none;
+        transition: width 0.3s;
+        width: 3.4rem;
+        font: 0.9rem/1 'Open Sans', sans-serif;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;  
+
+        &::placeholder {
+            color: white; 
+        }  
+
+        &:focus {
+            border: none;
+            outline: none; 
+            width: 10rem;
+            background: white;  
+
+            &::placeholder {
+                color: $main_dark;
+            } 
+        }
+    }
+
+    
 }
